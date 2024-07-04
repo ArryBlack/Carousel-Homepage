@@ -8,21 +8,24 @@
       src="https://kit.fontawesome.com/07b3951eeb.js"
       crossorigin="anonymous"
     ></script>
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
     <style>
       * {
         padding: 0;
         margin: 0;
         box-sizing: border-box;
       }
-      body {
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        min-height: 100vh;
-      }
-      .card {
-        width: 290px;
-        height: 450px;
+     
+/*Card Design*/
+.card {
+        width: 90%;
+        height: 480px;
         text-align: center;
         border-radius: 10px;
         box-shadow: 0px 2px 5px gray;
@@ -32,6 +35,9 @@
         height: 50%;
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
+      }
+      .card_content{
+        padding: 1em;
       }
       .card_subject {
         margin: 1em 0;
@@ -43,12 +49,17 @@
       }
       .card_heading {
         font-size: 1.125rem;
+        height: 2em;
       }
       .card_ratings {
-        margin: 10px 0;
+        margin: 1em 0;
       }
       .card_buttons {
-        margin: 2em 0;
+        
+        margin: 1em 0;
+        display: flex;
+        justify-content: space-evenly;
+        
       }
       .card_buttons a {
         text-decoration: none;
@@ -56,74 +67,505 @@
         background-color: #ff1f59;
         padding: 10px;
         border-radius: 5px;
+        transition: 200ms;
+        font-weight: 700;
+
       }
-      @media (max-width: 700px) {
-        body {
-          flex-direction: column;
-        }
+      .card_buttons a:hover {
+       
+        color: #212529;
+        transition: 200ms;
+       
       }
+
+
+      .swiper-container{
+        overflow: hidden;
+        max-width: 80%;
+        margin: 2em auto;
+        padding: 1em 0.5em;
+      }
+     
+    
+      
+      
     </style>
   </head>
   <body>
-    <div class="card">
-      <img src="images/ScratchCarousel.jpg" alt="" class="card_thumbnail" />
-      <div class="card_subject">
-        <span class="card_subject">IT Technologies</span>
-        <span class="card_subject">Scratch</span>
-      </div>
-      <h1 class="card_heading">Intro to programming with Scratch</h1>
-      <div class="card_ratings">
-        <i class="fa-solid fa-star" style="color: rgb(255, 196, 0)"></i>
-        <i class="fa-solid fa-star" style="color: rgb(255, 196, 0)"></i>
-        <i class="fa-solid fa-star" style="color: rgb(255, 196, 0)"></i>
-        <i class="fa-solid fa-star" style="color: rgb(255, 196, 0)"></i>
-        <i class="fas fa-star-half-alt" style="color: rgb(255, 196, 0)"></i>
-        <span>(95)</span>
-        <div class="card_buttons">
-          <a href="">Book Demo</a>
-          <a href="">View Details</a>
+    
+    <div class="container swiper">
+      <div class="swiper-container s1">
+        <div class="card-list swiper-wrapper">
+          <div class="card swiper-slide">
+            <img src="images/ScratchCarousel.jpg" alt="" class="card_thumbnail" />
+            <div class="card_content">
+              <div class="card_subject">
+                <span class="card_subject">IT Technologies</span>
+                <span class="card_subject">Scratch</span>
+              </div>
+              <h1 class="card_heading">Intro to programming with Scratch</h1>
+              <div class="card_ratings">
+                <i class="fa-solid fa-star" style="color: rgb(255, 196, 0)"></i>
+                <i class="fa-solid fa-star" style="color: rgb(255, 196, 0)"></i>
+                <i class="fa-solid fa-star" style="color: rgb(255, 196, 0)"></i>
+                <i class="fa-solid fa-star" style="color: rgb(255, 196, 0)"></i>
+                <i class="fas fa-star-half-alt" style="color: rgb(255, 196, 0)"></i>
+                <span>(95)</span>
+                
+              </div>
+              <div class="card_buttons">
+                <a href="">Book Demo</a>
+                <a href="">View Details</a>
+              </div>
+            </div>
+          </div>
+          <div class="card swiper-slide">
+            <img src="images/RoboticsCarouselImage.jpg" alt="" class="card_thumbnail" />
+            <div class="card_content">
+              <div class="card_subject">
+                <span class="card_subject">IT Technologies</span>
+                <span class="card_subject">Robotics</span>
+              </div>
+              <h1 class="card_heading">Robotics</h1>
+              <div class="card_ratings">
+                <i class="fa-solid fa-star" style="color: rgb(255, 196, 0)"></i>
+                <i class="fa-solid fa-star" style="color: rgb(255, 196, 0)"></i>
+                <i class="fa-solid fa-star" style="color: rgb(255, 196, 0)"></i>
+                <i class="fa-solid fa-star" style="color: rgb(255, 196, 0)"></i>
+                <i class="fas fa-star-half-alt" style="color: rgb(255, 196, 0)"></i>
+                <span>(95)</span>
+                
+              </div>
+              <div class="card_buttons">
+                <a href="">Book Demo</a>
+                <a href="">View Details</a>
+              </div>
+            </div>
+          </div>
+          <div class="card swiper-slide">
+            <img src="images/PythonCarousel.jpg" alt="" class="card_thumbnail" />
+            <div class="card_content">
+              <div class="card_subject">
+                <span class="card_subject">IT Technologies</span>
+                <span class="card_subject">Scratch</span>
+              </div>
+              <h1 class="card_heading">Intro to programming with Python</h1>
+              <div class="card_ratings">
+                <i class="fa-solid fa-star" style="color: rgb(255, 196, 0)"></i>
+                <i class="fa-solid fa-star" style="color: rgb(255, 196, 0)"></i>
+                <i class="fa-solid fa-star" style="color: rgb(255, 196, 0)"></i>
+                <i class="fa-solid fa-star" style="color: rgb(255, 196, 0)"></i>
+                <i class="fas fa-star-half-alt" style="color: rgb(255, 196, 0)"></i>
+                <span>(95)</span>
+                
+              </div>
+              <div class="card_buttons">
+                <a href="">Book Demo</a>
+                <a href="">View Details</a>
+              </div>
+            </div>
+          </div>
+          <div class="card swiper-slide">
+            <img src="images/Java.jpg" alt="" class="card_thumbnail" />
+            <div class="card_content">
+              <div class="card_subject">
+                <span class="card_subject">IT Technologies</span>
+                <span class="card_subject">Scratch</span>
+              </div>
+              <h1 class="card_heading">Intro to programming with Java</h1>
+              <div class="card_ratings">
+                <i class="fa-solid fa-star" style="color: rgb(255, 196, 0)"></i>
+                <i class="fa-solid fa-star" style="color: rgb(255, 196, 0)"></i>
+                <i class="fa-solid fa-star" style="color: rgb(255, 196, 0)"></i>
+                <i class="fa-solid fa-star" style="color: rgb(255, 196, 0)"></i>
+                <i class="fas fa-star-half-alt" style="color: rgb(255, 196, 0)"></i>
+                <span>(95)</span>
+                
+              </div>
+              <div class="card_buttons">
+                <a href="">Book Demo</a>
+                <a href="">View Details</a>
+              </div>
+            </div>
+          </div>
+          <div class="card swiper-slide">
+            <img src="images/CppCarouselCover.jpg" alt="" class="card_thumbnail" />
+            <div class="card_content">
+              <div class="card_subject">
+                <span class="card_subject">IT Technologies</span>
+                <span class="card_subject">C++</span>
+              </div>
+              <h1 class="card_heading">Intro to programming with C++</h1>
+              <div class="card_ratings">
+                <i class="fa-solid fa-star" style="color: rgb(255, 196, 0)"></i>
+                <i class="fa-solid fa-star" style="color: rgb(255, 196, 0)"></i>
+                <i class="fa-solid fa-star" style="color: rgb(255, 196, 0)"></i>
+                <i class="fa-solid fa-star" style="color: rgb(255, 196, 0)"></i>
+                <i class="fas fa-star-half-alt" style="color: rgb(255, 196, 0)"></i>
+                <span>(95)</span>
+                
+              </div>
+              <div class="card_buttons">
+                <a href="">Book Demo</a>
+                <a href="">View Details</a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+      <div class="swiper-button-prev prev-btn-1"></div>
+  <div class="swiper-button-next next-btn-1"></div>
     </div>
-    <div class="card">
-      <img src="images/PythonCarousel.jpg" alt="" class="card_thumbnail" />
-      <div class="card_subject">
-        <span class="card_subject">IT Technologies</span>
-        <span class="card_subject">Python</span>
-      </div>
-      <h1 class="card_heading">Intro to programming with Python</h1>
-      <div class="card_ratings">
-        <i class="fa-solid fa-star" style="color: rgb(255, 196, 0)"></i>
-        <i class="fa-solid fa-star" style="color: rgb(255, 196, 0)"></i>
-        <i class="fa-solid fa-star" style="color: rgb(255, 196, 0)"></i>
-        <i class="fa-solid fa-star" style="color: rgb(255, 196, 0)"></i>
-        <i class="fas fa-star-half-alt" style="color: rgb(255, 196, 0)"></i>
-        <span>(95)</span>
-        <div class="card_buttons">
-          <a href="">Book Demo</a>
-          <a href="">View Details</a>
+    <div class="container swiper">
+      <div class="swiper-container s2">
+        <div class="card-list swiper-wrapper">
+          <div class="card swiper-slide">
+            <img src="images/ScratchCarousel.jpg" alt="" class="card_thumbnail" />
+            <div class="card_content">
+              <div class="card_subject">
+                <span class="card_subject">IT Technologies</span>
+                <span class="card_subject">Scratch</span>
+              </div>
+              <h1 class="card_heading">Intro to programming with Scratch</h1>
+              <div class="card_ratings">
+                <i class="fa-solid fa-star" style="color: rgb(255, 196, 0)"></i>
+                <i class="fa-solid fa-star" style="color: rgb(255, 196, 0)"></i>
+                <i class="fa-solid fa-star" style="color: rgb(255, 196, 0)"></i>
+                <i class="fa-solid fa-star" style="color: rgb(255, 196, 0)"></i>
+                <i class="fas fa-star-half-alt" style="color: rgb(255, 196, 0)"></i>
+                <span>(95)</span>
+                
+              </div>
+              <div class="card_buttons">
+                <a href="">Book Demo</a>
+                <a href="">View Details</a>
+              </div>
+            </div>
+          </div>
+          <div class="card swiper-slide">
+            <img src="images/RoboticsCarouselImage.jpg" alt="" class="card_thumbnail" />
+            <div class="card_content">
+              <div class="card_subject">
+                <span class="card_subject">IT Technologies</span>
+                <span class="card_subject">Robotics</span>
+              </div>
+              <h1 class="card_heading">Robotics</h1>
+              <div class="card_ratings">
+                <i class="fa-solid fa-star" style="color: rgb(255, 196, 0)"></i>
+                <i class="fa-solid fa-star" style="color: rgb(255, 196, 0)"></i>
+                <i class="fa-solid fa-star" style="color: rgb(255, 196, 0)"></i>
+                <i class="fa-solid fa-star" style="color: rgb(255, 196, 0)"></i>
+                <i class="fas fa-star-half-alt" style="color: rgb(255, 196, 0)"></i>
+                <span>(95)</span>
+                
+              </div>
+              <div class="card_buttons">
+                <a href="">Book Demo</a>
+                <a href="">View Details</a>
+              </div>
+            </div>
+          </div>
+          <div class="card swiper-slide">
+            <img src="images/PythonCarousel.jpg" alt="" class="card_thumbnail" />
+            <div class="card_content">
+              <div class="card_subject">
+                <span class="card_subject">IT Technologies</span>
+                <span class="card_subject">Scratch</span>
+              </div>
+              <h1 class="card_heading">Intro to programming with Python</h1>
+              <div class="card_ratings">
+                <i class="fa-solid fa-star" style="color: rgb(255, 196, 0)"></i>
+                <i class="fa-solid fa-star" style="color: rgb(255, 196, 0)"></i>
+                <i class="fa-solid fa-star" style="color: rgb(255, 196, 0)"></i>
+                <i class="fa-solid fa-star" style="color: rgb(255, 196, 0)"></i>
+                <i class="fas fa-star-half-alt" style="color: rgb(255, 196, 0)"></i>
+                <span>(95)</span>
+                
+              </div>
+              <div class="card_buttons">
+                <a href="">Book Demo</a>
+                <a href="">View Details</a>
+              </div>
+            </div>
+          </div>
+          <div class="card swiper-slide">
+            <img src="images/Java.jpg" alt="" class="card_thumbnail" />
+            <div class="card_content">
+              <div class="card_subject">
+                <span class="card_subject">IT Technologies</span>
+                <span class="card_subject">Scratch</span>
+              </div>
+              <h1 class="card_heading">Intro to programming with Java</h1>
+              <div class="card_ratings">
+                <i class="fa-solid fa-star" style="color: rgb(255, 196, 0)"></i>
+                <i class="fa-solid fa-star" style="color: rgb(255, 196, 0)"></i>
+                <i class="fa-solid fa-star" style="color: rgb(255, 196, 0)"></i>
+                <i class="fa-solid fa-star" style="color: rgb(255, 196, 0)"></i>
+                <i class="fas fa-star-half-alt" style="color: rgb(255, 196, 0)"></i>
+                <span>(95)</span>
+                
+              </div>
+              <div class="card_buttons">
+                <a href="">Book Demo</a>
+                <a href="">View Details</a>
+              </div>
+            </div>
+          </div>
+          <div class="card swiper-slide">
+            <img src="images/CppCarouselCover.jpg" alt="" class="card_thumbnail" />
+            <div class="card_content">
+              <div class="card_subject">
+                <span class="card_subject">IT Technologies</span>
+                <span class="card_subject">C++</span>
+              </div>
+              <h1 class="card_heading">Intro to programming with C++</h1>
+              <div class="card_ratings">
+                <i class="fa-solid fa-star" style="color: rgb(255, 196, 0)"></i>
+                <i class="fa-solid fa-star" style="color: rgb(255, 196, 0)"></i>
+                <i class="fa-solid fa-star" style="color: rgb(255, 196, 0)"></i>
+                <i class="fa-solid fa-star" style="color: rgb(255, 196, 0)"></i>
+                <i class="fas fa-star-half-alt" style="color: rgb(255, 196, 0)"></i>
+                <span>(95)</span>
+                
+              </div>
+              <div class="card_buttons">
+                <a href="">Book Demo</a>
+                <a href="">View Details</a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+      <div class="swiper-button-prev prev-btn-2"></div>
+  <div class="swiper-button-next next-btn-2"></div>
     </div>
-    <div class="card">
-      <img src="images/ScratchCarousel.jpg" alt="" class="card_thumbnail" />
-      <div class="card_subject">
-        <span class="card_subject">IT Technologies</span>
-        <span class="card_subject">Scratch</span>
-      </div>
-      <h1 class="card_heading">Intro to programming with Scratch</h1>
-      <div class="card_ratings">
-        <i class="fa-solid fa-star" style="color: rgb(255, 196, 0)"></i>
-        <i class="fa-solid fa-star" style="color: rgb(255, 196, 0)"></i>
-        <i class="fa-solid fa-star" style="color: rgb(255, 196, 0)"></i>
-        <i class="fa-solid fa-star" style="color: rgb(255, 196, 0)"></i>
-        <i class="fas fa-star-half-alt" style="color: rgb(255, 196, 0)"></i>
-        <span>(95)</span>
-        <div class="card_buttons">
-          <a href="">Book Demo</a>
-          <a href="">View Details</a>
+    <div class="container swiper">
+      <div class="swiper-container s3">
+        <div class="card-list swiper-wrapper">
+          <div class="card swiper-slide">
+            <img src="images/ScratchCarousel.jpg" alt="" class="card_thumbnail" />
+            <div class="card_content">
+              <div class="card_subject">
+                <span class="card_subject">IT Technologies</span>
+                <span class="card_subject">Scratch</span>
+              </div>
+              <h1 class="card_heading">Intro to programming with Scratch</h1>
+              <div class="card_ratings">
+                <i class="fa-solid fa-star" style="color: rgb(255, 196, 0)"></i>
+                <i class="fa-solid fa-star" style="color: rgb(255, 196, 0)"></i>
+                <i class="fa-solid fa-star" style="color: rgb(255, 196, 0)"></i>
+                <i class="fa-solid fa-star" style="color: rgb(255, 196, 0)"></i>
+                <i class="fas fa-star-half-alt" style="color: rgb(255, 196, 0)"></i>
+                <span>(95)</span>
+                
+              </div>
+              <div class="card_buttons">
+                <a href="">Book Demo</a>
+                <a href="">View Details</a>
+              </div>
+            </div>
+          </div>
+          <div class="card swiper-slide">
+            <img src="images/RoboticsCarouselImage.jpg" alt="" class="card_thumbnail" />
+            <div class="card_content">
+              <div class="card_subject">
+                <span class="card_subject">IT Technologies</span>
+                <span class="card_subject">Robotics</span>
+              </div>
+              <h1 class="card_heading">Robotics</h1>
+              <div class="card_ratings">
+                <i class="fa-solid fa-star" style="color: rgb(255, 196, 0)"></i>
+                <i class="fa-solid fa-star" style="color: rgb(255, 196, 0)"></i>
+                <i class="fa-solid fa-star" style="color: rgb(255, 196, 0)"></i>
+                <i class="fa-solid fa-star" style="color: rgb(255, 196, 0)"></i>
+                <i class="fas fa-star-half-alt" style="color: rgb(255, 196, 0)"></i>
+                <span>(95)</span>
+                
+              </div>
+              <div class="card_buttons">
+                <a href="">Book Demo</a>
+                <a href="">View Details</a>
+              </div>
+            </div>
+          </div>
+          <div class="card swiper-slide">
+            <img src="images/PythonCarousel.jpg" alt="" class="card_thumbnail" />
+            <div class="card_content">
+              <div class="card_subject">
+                <span class="card_subject">IT Technologies</span>
+                <span class="card_subject">Scratch</span>
+              </div>
+              <h1 class="card_heading">Intro to programming with Python</h1>
+              <div class="card_ratings">
+                <i class="fa-solid fa-star" style="color: rgb(255, 196, 0)"></i>
+                <i class="fa-solid fa-star" style="color: rgb(255, 196, 0)"></i>
+                <i class="fa-solid fa-star" style="color: rgb(255, 196, 0)"></i>
+                <i class="fa-solid fa-star" style="color: rgb(255, 196, 0)"></i>
+                <i class="fas fa-star-half-alt" style="color: rgb(255, 196, 0)"></i>
+                <span>(95)</span>
+                
+              </div>
+              <div class="card_buttons">
+                <a href="">Book Demo</a>
+                <a href="">View Details</a>
+              </div>
+            </div>
+          </div>
+          <div class="card swiper-slide">
+            <img src="images/Java.jpg" alt="" class="card_thumbnail" />
+            <div class="card_content">
+              <div class="card_subject">
+                <span class="card_subject">IT Technologies</span>
+                <span class="card_subject">Scratch</span>
+              </div>
+              <h1 class="card_heading">Intro to programming with Java</h1>
+              <div class="card_ratings">
+                <i class="fa-solid fa-star" style="color: rgb(255, 196, 0)"></i>
+                <i class="fa-solid fa-star" style="color: rgb(255, 196, 0)"></i>
+                <i class="fa-solid fa-star" style="color: rgb(255, 196, 0)"></i>
+                <i class="fa-solid fa-star" style="color: rgb(255, 196, 0)"></i>
+                <i class="fas fa-star-half-alt" style="color: rgb(255, 196, 0)"></i>
+                <span>(95)</span>
+                
+              </div>
+              <div class="card_buttons">
+                <a href="">Book Demo</a>
+                <a href="">View Details</a>
+              </div>
+            </div>
+          </div>
+          <div class="card swiper-slide">
+            <img src="images/CppCarouselCover.jpg" alt="" class="card_thumbnail" />
+            <div class="card_content">
+              <div class="card_subject">
+                <span class="card_subject">IT Technologies</span>
+                <span class="card_subject">C++</span>
+              </div>
+              <h1 class="card_heading">Intro to programming with C++</h1>
+              <div class="card_ratings">
+                <i class="fa-solid fa-star" style="color: rgb(255, 196, 0)"></i>
+                <i class="fa-solid fa-star" style="color: rgb(255, 196, 0)"></i>
+                <i class="fa-solid fa-star" style="color: rgb(255, 196, 0)"></i>
+                <i class="fa-solid fa-star" style="color: rgb(255, 196, 0)"></i>
+                <i class="fas fa-star-half-alt" style="color: rgb(255, 196, 0)"></i>
+                <span>(95)</span>
+                
+              </div>
+              <div class="card_buttons">
+                <a href="">Book Demo</a>
+                <a href="">View Details</a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+      <div class="swiper-button-prev prev-btn-3"></div>
+  <div class="swiper-button-next next-btn-3"></div>
     </div>
+    
+    
+    <script>
+    
+  
+
+    const slider1 = new Swiper('.s1' ,{
+   // Optional parameters
+  direction: 'horizontal',
+  loop: true,
+  spaceBetween: 30, 
+
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.next-btn-1',
+    prevEl: '.prev-btn-1',
+  },
+
+ breakpoints: {
+  0:{
+    slidesPerView: 1
+
+  },
+  620:{
+    slidesPerView: 2
+
+  },
+  1024:{
+    slidesPerView: 3
+
+  },
+  1440:{
+    slidesPerView: 4
+  }
+ }
+  });
+  const slider2 = new Swiper('.s2' ,{
+   // Optional parameters
+  direction: 'horizontal',
+  loop: true,
+  spaceBetween: 30, 
+
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.next-btn-2',
+    prevEl: '.prev-btn-2',
+  },
+
+ breakpoints: {
+  0:{
+    slidesPerView: 1
+
+  },
+  620:{
+    slidesPerView: 2
+
+  },
+  1024:{
+    slidesPerView: 3
+
+  },
+  1440:{
+    slidesPerView: 4
+  }
+ }
+  });
+  const slider3 = new Swiper('.s3' ,{
+   // Optional parameters
+  direction: 'horizontal',
+  loop: true,
+  spaceBetween: 30, 
+
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.next-btn-3',
+    prevEl: '.prev-btn-3',
+  },
+
+ breakpoints: {
+  0:{
+    slidesPerView: 1
+
+  },
+  620:{
+    slidesPerView: 2
+
+  },
+  1024:{
+    slidesPerView: 3
+
+  },
+  1440:{
+    slidesPerView: 4
+  }
+ }
+  });
+
+
+ 
+
+      
+    </script>
   </body>
 </html>
